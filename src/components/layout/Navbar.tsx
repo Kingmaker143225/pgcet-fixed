@@ -11,7 +11,7 @@ const NAV_LINKS = [
   { href: "/syllabus", label: "Syllabus" },
   { href: "/hall-ticket", label: "Hall Ticket" },
   { href: "/results", label: "Results" },
-  { href: "/mock-test", label: "Mock Test" },
+  // { href: "/mock-test", label: "Mock Test" },
   { href: "/notifications", label: "Notifications" },
   { href: "/contact", label: "Contact" },
   { href: "/faq", label: "FAQ" },
@@ -23,7 +23,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-primary text-primary-foreground sticky top-0 z-40 shadow-md">
+    // <nav className="bg-primary text-primary-foreground sticky top-0 z-40 shadow-md">
+    <nav className="bg-[#2EA6D9] text-white sticky top-0 z-40 shadow-md">
       <div className="container mx-auto max-w-7xl px-4">
         
         {/* Desktop Nav */}
@@ -34,7 +35,8 @@ export default function Navbar() {
               return (
                 <li key={link.href}>
                   <Link href={link.href}>
-                    <div className={`px-3 py-4 text-sm font-medium transition-all border-b-2 hover:bg-primary-foreground/10 cursor-pointer ${isActive ? "border-secondary text-secondary" : "border-transparent"}`}>
+                    {/* <div className={`px-3 py-4 text-sm font-medium transition-all border-b-2 hover:bg-primary-foreground/10 cursor-pointer ${isActive ? "border-secondary text-secondary" : "border-transparent"}`}> */}
+                    <div className={`px-3 py-4 text-sm font-semibold transition-all border-b-2 hover:bg-white/10 cursor-pointer ${isActive ? "border-[#F4B400] text-[#F4B400]" : "border-transparent text-white"}`}>
                       {link.label}
                     </div>
                   </Link>
@@ -44,7 +46,8 @@ export default function Navbar() {
           </ul>
           
           <Link href="/login">
-            <div className="bg-primary-foreground text-primary px-4 py-1.5 rounded-sm text-sm font-bold hover:bg-secondary hover:text-secondary-foreground transition-colors cursor-pointer shadow-sm">
+            {/* <div className="bg-primary-foreground text-primary px-4 py-1.5 rounded-sm text-sm font-bold hover:bg-secondary hover:text-secondary-foreground transition-colors cursor-pointer shadow-sm"> */}
+            <div className="bg-white text-[#2EA6D9] px-5 py-2 rounded-md text-sm font-bold hover:bg-[#F4B400] hover:text-[#082E5F] transition-colors cursor-pointer shadow-sm">
               Login
             </div>
           </Link>

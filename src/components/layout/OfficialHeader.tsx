@@ -8,7 +8,7 @@ export default function OfficialHeader() {
     <header className="bg-background py-4 px-4 border-b">
       <div className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4">
         
-        <div className="flex items-center gap-4">
+        {/* <div className="flex items-center gap-4">
           <Link href="/">
             <div className="w-16 h-16 rounded-full bg-[#06254D] flex items-center justify-center text-secondary font-serif text-3xl font-bold shadow-sm shrink-0 hover:opacity-90 transition-opacity cursor-pointer ring-2 ring-secondary/40">
               P
@@ -25,8 +25,50 @@ export default function OfficialHeader() {
               Post-Graduate Common Entrance Test • Conducted by Osmania University, Hyderabad on behalf of Telangana State Council of Higher Education (TSCHE)
             </p>
           </div>
-        </div>
+        </div> */}
 
+        <div className="flex items-center gap-6">
+
+  <img
+    src="/src/assets/left-logo.png"
+    alt="Government Logo"
+    className="h-20 w-auto object-contain"
+  />
+  <div>
+    <p className="text-sm font-semibold tracking-wide text-primary uppercase">
+      Government of Telangana
+    </p>
+
+    <h1 className="text-5xl font-serif font-bold text-primary">
+      TG ECET-2026
+    </h1>
+
+    <p className="text-lg text-primary mt-2">
+      Telangana Common Entrance Test • Conducted by Osmania University, Hyderabad on behalf of Telangana State Council of Higher Education (TSCHE)
+    </p>
+  </div>
+  <img
+    src="/src/assets/right-logo.png"
+    alt="PGCET Logo"
+    className="h-20 w-auto object-contain"
+  />
+
+  {/* <div>
+    <p className="text-sm font-semibold tracking-wide text-primary uppercase">
+      Government of Telangana
+    </p>
+
+    <h1 className="text-5xl font-serif font-bold text-primary">
+      TG ECET-2026
+    </h1>
+
+    <p className="text-lg text-primary mt-2">
+      Telangana Common Entrance Test • Conducted by Osmania University, Hyderabad on behalf of Telangana State Council of Higher Education (TSCHE)
+    </p>
+  </div> */}
+
+</div>
+{/* 
         <div className="flex items-center gap-3 w-full md:w-auto">
           <div className="relative w-full md:w-64 hidden sm:block">
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -41,7 +83,7 @@ export default function OfficialHeader() {
               Apply Now
             </Button>
           </Link>
-        </div>
+        </div> */}
 
       </div>
     </header>

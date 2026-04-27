@@ -4,180 +4,240 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base Reset */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  font-family:'Inter',sans-serif;
-  background:#ffffff;
-  color:#1d3557;
-  line-height:1.6;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Theme Colors */
-:root{
-  --navy:#0b2c5f;
-  --blue:#2f9fd8;
-  --gold:#d9a404;
-  --light:#f8fafc;
-  --text:#1d3557;
+:root {
+  --navy: #082E5F;
+  --blue: #2EA6D9;
+  --gold: #F4B400;
+  --light: #F8FAFC;
+  --text: #082E5F;
 }
 
-/* Headings */
-h1,h2,h3{
-  font-family:'Playfair Display',serif;
-  color:var(--navy);
+/* Base */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  color: var(--text);
+  line-height: 1.6;
 }
 
-/* Links */
-a{
-  text-decoration:none;
-  color:inherit;
+/* Typography */
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Global Tailwind color overrides */
+.bg-primary {
+  background-color: var(--navy) !important;
+}
+
+.bg-secondary {
+  background-color: var(--gold) !important;
+}
+
+.bg-accent {
+  background-color: var(--blue) !important;
+}
+
+.text-primary {
+  color: var(--navy);
+}
+
+.text-secondary {
+  color: var(--gold) !important;
+}
+
+.text-primary-foreground {
+  color: #ffffff !important;
+}
+
+.text-secondary-foreground {
+  color: var(--navy) !important;
+}
+
+.border-secondary {
+  border-color: var(--gold) !important;
+}
+
+/* IMPORTANT: Fix text inside dark/navy section headers */
+.bg-primary,
+.bg-primary *,
+[class*="bg-primary"],
+[class*="bg-primary"] * {
+  color: #ffffff !important;
+}
+
+/* Keep yellow accents yellow inside dark headers */
+.bg-primary .text-secondary,
+.bg-primary [class*="text-secondary"],
+[class*="bg-primary"] .text-secondary,
+[class*="bg-primary"] [class*="text-secondary"] {
+  color: var(--gold) !important;
 }
 
 /* Buttons */
-button{
-  cursor:pointer;
-  border:none;
-  border-radius:6px;
-  padding:10px 18px;
-  font-weight:600;
+button {
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
 }
 
-.btn-primary{
-  background:var(--gold);
-  color:#fff;
+.btn-primary {
+  background: var(--gold);
+  color: var(--navy);
 }
 
-.btn-primary:hover{
-  opacity:.9;
+.btn-primary:hover {
+  opacity: 0.9;
 }
 
-.btn-secondary{
-  background:var(--blue);
-  color:#fff;
+.btn-secondary {
+  background: var(--blue);
+  color: #ffffff;
 }
 
 /* Containers */
-.container{
-  width:90%;
-  max-width:1200px;
-  margin:auto;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* Cards */
-.card{
-  background:#fff;
-  border:1px solid #dbe3ea;
-  border-radius:12px;
-  padding:20px;
-  box-shadow:0 2px 8px rgba(0,0,0,.05);
+.card {
+  background: #ffffff;
+  border: 1px solid #dbe3ea;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* Navbar */
-.navbar{
-  background:var(--blue);
-  color:white;
+.navbar {
+  background: var(--blue);
+  color: #ffffff;
 }
 
-.navbar a{
-  padding:14px 18px;
-  display:inline-block;
+.navbar a {
+  padding: 14px 18px;
+  display: inline-block;
 }
 
 /* Top Header Strip */
-.top-strip{
-  background:var(--navy);
-  color:white;
-  padding:8px 0;
-  font-size:14px;
+.top-strip {
+  background: var(--navy);
+  color: #ffffff;
+  padding: 8px 0;
+  font-size: 14px;
 }
 
 /* Notification strip */
-.notice-strip{
-  background:var(--gold);
-  color:#111;
-  padding:10px;
-  font-weight:600;
+.notice-strip {
+  background: var(--gold);
+  color: var(--navy);
+  padding: 10px;
+  font-weight: 600;
 }
 
 /* Hero */
-.hero{
-  padding:70px 20px;
-  text-align:center;
-  background:linear-gradient(90deg,#2f9fd8,#7c2d3b);
-  color:white;
+.hero {
+  padding: 70px 20px;
+  text-align: center;
+  background: linear-gradient(90deg, #2EA6D9, #7C2D3B);
+  color: #ffffff;
 }
 
-.hero h1{
-  color:white;
-  font-size:52px;
+.hero h1 {
+  color: #ffffff;
+  font-size: 52px;
 }
 
 /* Forms */
 input,
 select,
-textarea{
-  width:100%;
-  padding:12px;
-  border:1px solid #cbd5e1;
-  border-radius:6px;
-  margin-bottom:14px;
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  margin-bottom: 14px;
 }
 
 /* Tables */
-table{
-  width:100%;
-  border-collapse:collapse;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-th,td{
-  border:1px solid #ddd;
-  padding:12px;
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
 }
 
 /* Footer */
-footer{
-  background:var(--navy);
-  color:white;
-  padding:40px 20px;
-  margin-top:50px;
+footer {
+  background: var(--navy);
+  color: #ffffff;
+  padding: 40px 20px;
+  margin-top: 50px;
 }
 
 /* Print */
-@media print{
-  body *{
-    visibility:hidden;
+@media print {
+  body * {
+    visibility: hidden;
   }
 
   .print-area,
-  .print-area *{
-    visibility:visible;
+  .print-area * {
+    visibility: visible;
   }
 
-  .print-area{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
+  .print-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 }
 
 /* Responsive */
-@media(max-width:768px){
-.hero h1{
-font-size:34px;
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .navbar a {
+    display: block;
+  }
+
+  .container {
+    width: 95%;
+  }
 }
 
-.navbar a{
-display:block;
-}
-
-.container{
-width:95%;
-}
+/* Fix only light rounded pill/badge text */
+.rounded-full.bg-muted,
+.rounded-full.bg-muted *,
+.rounded-full.bg-white,
+.rounded-full.bg-white *,
+.rounded-full[class*="bg-muted"],
+.rounded-full[class*="bg-muted"] * {
+  color: #082E5F !important;
 }

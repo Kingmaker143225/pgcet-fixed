@@ -4,7 +4,7 @@ import Ticker from "@/components/home/Ticker";
 import QuickActions from "@/components/home/QuickActions";
 import AboutSection from "@/components/home/AboutSection";
 import LatestUpdates from "@/components/home/LatestUpdates";
-import StatsCounter from "@/components/home/StatsCounter";
+// import StatsCounter from "@/components/home/StatsCounter";
 import UpcomingDates from "@/components/home/UpcomingDates";
 import CoursesPreview from "@/components/home/CoursesPreview";
 import NewsPreview from "@/components/home/NewsPreview";
@@ -18,7 +18,7 @@ export default function Home() {
       <QuickActions />
       <AboutSection />
       <LatestUpdates />
-      <StatsCounter />
+      {/* <StatsCounter /> */}
       <UpcomingDates />
       <CoursesPreview />
       <NewsPreview />

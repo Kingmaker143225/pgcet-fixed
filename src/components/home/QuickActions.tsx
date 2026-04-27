@@ -7,7 +7,7 @@ const actions = [
   { title: "Fill Application", desc: "Submit your details", icon: FileEdit, href: "/application" },
   { title: "Print Application", desc: "Download submitted form", icon: Printer, href: "/application" },
   { title: "Download Hall Ticket", desc: "Get your exam admit card", icon: Download, href: "/hall-ticket" },
-  { title: "Results", desc: "Check your PGCET score", icon: Award, href: "/results" },
+  { title: "Results", desc: "Check your TG ECET score", icon: Award, href: "/results" },
   { title: "Rank Card", desc: "Download official rank card", icon: GraduationCap, href: "/results" },
   { title: "Mock Test", desc: "Practice before exam", icon: CheckSquare, href: "/mock-test" },
 ];

@@ -14,12 +14,12 @@ export default function Footer() {
                 P
               </div>
               <div>
-                <h3 className="font-serif font-bold text-xl text-white leading-tight">PGCET</h3>
-                <p className="text-xs text-secondary font-medium">TSCHE</p>
+                <h3 className="font-serif font-bold text-xl text-white leading-tight">TG ECET</h3>
+                <p className="text-xs text-secondary font-medium">TG ECET</p>
               </div>
             </div>
             <p className="text-sm leading-relaxed">
-              The Post-Graduate Common Entrance Test is conducted by the Telangana State Council of Higher Education for admission into various PG courses in participating universities and their affiliated colleges.
+              Telangana Common Entrance Test is conducted by the Telangana State Council of Higher Education for admission into various PG courses in participating universities and their affiliated colleges.
             </p>
             <div className="flex gap-3 pt-2">
               <a href="#" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-colors">
@@ -41,7 +41,7 @@ export default function Footer() {
               <div className="h-0.5 w-8 bg-secondary ml-3 rounded-full"></div>
             </h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/about"><div className="hover:text-secondary transition-colors inline-block cursor-pointer">About PGCET</div></Link></li>
+              <li><Link href="/about"><div className="hover:text-secondary transition-colors inline-block cursor-pointer">About TG ECET</div></Link></li>
               <li><Link href="/important-dates"><div className="hover:text-secondary transition-colors inline-block cursor-pointer">Important Dates</div></Link></li>
               <li><Link href="/syllabus"><div className="hover:text-secondary transition-colors inline-block cursor-pointer">Syllabus & Exam Pattern</div></Link></li>
               <li><Link href="/faq"><div className="hover:text-secondary transition-colors inline-block cursor-pointer">Frequently Asked Questions</div></Link></li>
@@ -73,15 +73,18 @@ export default function Footer() {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                <span>PGCET Office, TSCHE Building, Masab Tank, Hyderabad, Telangana - 500028</span>
+                <span>TG ECET [FDH & B.Sc.(Mathematics)] – 2026,
+Behind Diamond Jubilee Library,
+University College of Engineering ,
+Osmania University, Hyderabad-500 007</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-secondary shrink-0" />
-                <span>+91 40 1234 5678</span>
+                <span>  +91 8179979584</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-secondary shrink-0" />
-                <span>support@pgcet.ts.gov.in</span>
+                <span>support@tgecet.ts.gov.in</span>
               </li>
             </ul>
             <div className="mt-6 p-4 bg-white/5 border border-white/10 rounded-md">

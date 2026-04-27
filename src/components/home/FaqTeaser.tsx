@@ -16,7 +16,7 @@ export default function FaqTeaser() {
           </div>
           <SectionTitle title="Frequently Asked Questions" centered />
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Find answers to common questions about the PGCET application, examination, and admission process.
+            Find answers to common questions about the TG ECET application, examination, and admission process.
           </p>
         </div>
 
