@@ -1,0 +1,49 @@
+import { Search } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Link } from "wouter";
+
+export default function OfficialHeader() {
+  return (
+    <header className="bg-background py-4 px-4 border-b">
+      <div className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4">
+        
+        <div className="flex items-center gap-4">
+          <Link href="/">
+            <div className="w-16 h-16 rounded-full bg-[#06254D] flex items-center justify-center text-secondary font-serif text-3xl font-bold shadow-sm shrink-0 hover:opacity-90 transition-opacity cursor-pointer ring-2 ring-secondary/40">
+              P
+            </div>
+          </Link>
+          <div>
+            <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1">
+              Government of Telangana
+            </div>
+            <h1 className="text-2xl md:text-3xl font-serif font-bold text-[#06254D] tracking-tight leading-none mb-1">
+              PGCET <span className="text-primary">2026</span>
+            </h1>
+            <p className="text-sm text-muted-foreground font-medium hidden sm:block">
+              Post-Graduate Common Entrance Test • Conducted by Osmania University, Hyderabad on behalf of Telangana State Council of Higher Education (TSCHE)
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-3 w-full md:w-auto">
+          <div className="relative w-full md:w-64 hidden sm:block">
+            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+            <Input 
+              type="search" 
+              placeholder="Search portal..." 
+              className="pl-9 bg-card border-border"
+            />
+          </div>
+          <Link href="/application">
+            <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold px-6 shadow-sm whitespace-nowrap">
+              Apply Now
+            </Button>
+          </Link>
+        </div>
+
+      </div>
+    </header>
+  );
+}

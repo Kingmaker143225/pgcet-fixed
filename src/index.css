@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Reset */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#ffffff;
+  color:#1d3557;
+  line-height:1.6;
+}
+
+/* Theme Colors */
+:root{
+  --navy:#0b2c5f;
+  --blue:#2f9fd8;
+  --gold:#d9a404;
+  --light:#f8fafc;
+  --text:#1d3557;
+}
+
+/* Headings */
+h1,h2,h3{
+  font-family:'Playfair Display',serif;
+  color:var(--navy);
+}
+
+/* Links */
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* Buttons */
+button{
+  cursor:pointer;
+  border:none;
+  border-radius:6px;
+  padding:10px 18px;
+  font-weight:600;
+}
+
+.btn-primary{
+  background:var(--gold);
+  color:#fff;
+}
+
+.btn-primary:hover{
+  opacity:.9;
+}
+
+.btn-secondary{
+  background:var(--blue);
+  color:#fff;
+}
+
+/* Containers */
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* Cards */
+.card{
+  background:#fff;
+  border:1px solid #dbe3ea;
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+/* Navbar */
+.navbar{
+  background:var(--blue);
+  color:white;
+}
+
+.navbar a{
+  padding:14px 18px;
+  display:inline-block;
+}
+
+/* Top Header Strip */
+.top-strip{
+  background:var(--navy);
+  color:white;
+  padding:8px 0;
+  font-size:14px;
+}
+
+/* Notification strip */
+.notice-strip{
+  background:var(--gold);
+  color:#111;
+  padding:10px;
+  font-weight:600;
+}
+
+/* Hero */
+.hero{
+  padding:70px 20px;
+  text-align:center;
+  background:linear-gradient(90deg,#2f9fd8,#7c2d3b);
+  color:white;
+}
+
+.hero h1{
+  color:white;
+  font-size:52px;
+}
+
+/* Forms */
+input,
+select,
+textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid #cbd5e1;
+  border-radius:6px;
+  margin-bottom:14px;
+}
+
+/* Tables */
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th,td{
+  border:1px solid #ddd;
+  padding:12px;
+}
+
+/* Footer */
+footer{
+  background:var(--navy);
+  color:white;
+  padding:40px 20px;
+  margin-top:50px;
+}
+
+/* Print */
+@media print{
+  body *{
+    visibility:hidden;
+  }
+
+  .print-area,
+  .print-area *{
+    visibility:visible;
+  }
+
+  .print-area{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+  }
+}
+
+/* Responsive */
+@media(max-width:768px){
+.hero h1{
+font-size:34px;
+}
+
+.navbar a{
+display:block;
+}
+
+.container{
+width:95%;
+}
+}
