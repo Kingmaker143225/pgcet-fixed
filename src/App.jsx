@@ -19,6 +19,13 @@ import Login from "@/pages/Login";
 import StudentDashboard from "@/pages/StudentDashboard";
 import AdminDashboard from "@/pages/AdminDashboard";
 import NotFound from "@/pages/not-found";
+import Courses from "./pages/Courses";
+import FeePayment from "@/pages/FeePayment";
+// import ApplicationForm from "@/pages/ApplicationForm";
+import PrintApplication from "@/pages/PrintApplication";
+import PaymentStatus from "@/pages/PaymentStatus";
+import RegistrationNumber from "@/pages/RegistrationNumber";
+
 
 const queryClient = new QueryClient();
 
@@ -27,6 +34,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
+      {/* <Route path="/courses" component={Courses} /> */}
       <Route path="/important-dates" component={ImportantDates} />
       <Route path="/application" component={ApplicationForm} />
       <Route path="/hall-ticket" component={HallTicket} />
@@ -39,7 +47,14 @@ function Router() {
       <Route path="/login" component={Login} />
       <Route path="/student-dashboard" component={StudentDashboard} />
       <Route path="/admin-dashboard" component={AdminDashboard} />
-      <Route component={NotFound} />
+      
+      <Route path="/courses" component={Courses} />
+      <Route path="/fee-payment" component={FeePayment} />
+<Route path="/application-form" component={ApplicationForm} />
+<Route path="/print-application" component={PrintApplication} />
+<Route path="/payment-status" component={PaymentStatus} />
+<Route path="/registration-number" component={RegistrationNumber} />
+<Route component={NotFound} />
     </Switch>
   );
 }

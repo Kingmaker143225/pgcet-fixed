@@ -7,7 +7,7 @@ export default function UpcomingDates() {
   const upcoming = importantDates.filter(d => d.status === "upcoming" || d.status === "active").slice(0, 4);
 
   return (
-    <section className="py-20 bg-muted/20">
+    <section className="py-10 bg-muted/20">
       <div className="container mx-auto max-w-7xl px-4">
         <SectionTitle title="Important Schedule" centered />
         

@@ -63,7 +63,7 @@ import PersonCard from "./PersonCard";
 
 export default function AboutSection() {
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section className="py-10 bg-background relative overflow-hidden">
       <div className="container mx-auto max-w-7xl px-4">
         
         {/* 3 Column Layout */}
@@ -82,17 +82,17 @@ Telangana, India."
           </div> */}
           <div className="flex justify-center lg:justify-start">
   <PersonCard 
-    name={`Prof. Kumar Molugaram
-Chairman, TG ECET 2026 &
+  name="Prof. Kumar Molugaram"
+
+  role={`Chairman, TG ECET 2026 &
 Vice-Chancellor, Osmania University`}
     
-    role=""
-    
-    contact={`Hyderabad-500007
+  contact={`Hyderabad-500007
 Telangana, India.`}
 
-    imageSrc="/src/assets/convener.png"
-  />
+  imageSrc="/src/assets/convener.png"
+  imageSize="w-28 h-28"
+/>
 </div>
 
           {/* CENTER CONTENT */}
@@ -128,17 +128,17 @@ Telangana, India."
 
           <div className="flex justify-center lg:justify-end">
   <PersonCard 
-    name={`Prof. P. Chandra Sekhar
-Convener, TGECET-2026 &
+  name="Prof. P. Chandra Sekhar"
+
+  role={`Convener, TGECET-2026 &
 Principal, University College of Engineering (Autonomous)`}
     
-    role=""
-    
-    contact={`Osmania University, Hyderabad-500007
+  contact={`Osmania University, Hyderabad-500007
 Telangana, India.`}
 
-    imageSrc="/src/assets/coordinator.png"
-  />
+  imageSrc="/src/assets/coordinator.png"
+  imageSize="w-28 h-28"
+/>
 </div>
 
         </div>

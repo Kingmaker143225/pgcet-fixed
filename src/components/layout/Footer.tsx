@@ -11,11 +11,11 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-primary font-serif text-xl font-bold">
-                P
+                T
               </div>
               <div>
                 <h3 className="font-serif font-bold text-xl text-white leading-tight">TG ECET</h3>
-                <p className="text-xs text-secondary font-medium">TG ECET</p>
+                <p className="text-xs text-secondary font-medium">TG ECET 2026</p>
               </div>
             </div>
             <p className="text-sm leading-relaxed">
@@ -52,15 +52,15 @@ export default function Footer() {
           {/* Important Links */}
           <div>
             <h4 className="font-serif text-lg font-bold text-white mb-6 flex items-center">
-              Candidate Services
+              Student Services
               <div className="h-0.5 w-8 bg-secondary ml-3 rounded-full"></div>
             </h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="/application"><div className="hover:text-secondary transition-colors inline-block cursor-pointer">Online Application</div></Link></li>
-              <li><Link href="/login"><div className="hover:text-secondary transition-colors inline-block cursor-pointer">Candidate Login</div></Link></li>
+              {/* <li><Link href="/login"><div className="hover:text-secondary transition-colors inline-block cursor-pointer">Candidate Login</div></Link></li>
               <li><Link href="/hall-ticket"><div className="hover:text-secondary transition-colors inline-block cursor-pointer">Download Hall Ticket</div></Link></li>
               <li><Link href="/results"><div className="hover:text-secondary transition-colors inline-block cursor-pointer">Results & Rank Card</div></Link></li>
-              <li><Link href="/mock-test"><div className="hover:text-secondary transition-colors inline-block cursor-pointer">Take Mock Test</div></Link></li>
+              <li><Link href="/mock-test"><div className="hover:text-secondary transition-colors inline-block cursor-pointer">Take Mock Test</div></Link></li> */}
             </ul>
           </div>
 

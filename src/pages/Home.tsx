@@ -9,6 +9,7 @@ import UpcomingDates from "@/components/home/UpcomingDates";
 import CoursesPreview from "@/components/home/CoursesPreview";
 import NewsPreview from "@/components/home/NewsPreview";
 import FaqTeaser from "@/components/home/FaqTeaser";
+import WelcomeSection from "@/components/home/WelcomeSection";
 
 export default function Home() {
   return (
@@ -16,11 +17,12 @@ export default function Home() {
       <Ticker />
       <Hero />
       <QuickActions />
+      <WelcomeSection />
       <AboutSection />
       <LatestUpdates />
       {/* <StatsCounter /> */}
       <UpcomingDates />
-      <CoursesPreview />
+      {/* <CoursesPreview /> */}
       <NewsPreview />
       <FaqTeaser />
     </SiteLayout>

@@ -17,14 +17,21 @@ export default function About() {
           <h2 className="text-3xl font-serif font-bold text-primary mb-6">Introduction</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Telangana Engineering Common Entrance Test for Diploma Holders of Engineering/Technology/Pharmacy and for B.Sc.(Mathematics) Degree Holders in short form as TG ECET [FDH & B.Sc.(Mathematics)] - 2026 is being conducted by Osmania University Hyderabad on behalf of the Telangana Council of Higher Education (TGCHE) for the academic year 2026-2027. This examination is the prerequisite for lateral entry admission into 2nd year regular B.E./B.Tech/B.Pharm. courses in both University and Un-Aided Private Professional Institutions (Minority & Non-Minority).
-
-Osmania University Hyderabad, Telangana is a place of Academic Excellence. Bringing the spark of knowledge to young minds and instilling a new confidence and vigor to face the world, it is providing quality Technical Education for 100 plus years. Telangana Council of Higher Education (TGCHE) has delegated the task to Osmania University for conducting the most prestigious Telangana Engineering Common Entrance Test (TG ECET-2026) for this year 2026.  .
-
-The TG ECET - 2026 is being conducted through ONLINE mode only. state-level examination conducted by the Telangana State Council of Higher Education (TSCHE). It serves as the singular gateway for admissions into regular postgraduate programs including M.Tech, M.Pharm, MBA, and MCA offered by universities and their affiliated colleges across the state.
           </p>
+
+
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Osmania University Hyderabad, Telangana is a place of Academic Excellence. Bringing the spark of knowledge to young minds and instilling a new confidence and vigor to face the world, it is providing quality Technical Education for 100 plus years. Telangana Council of Higher Education (TGCHE) has delegated the task to <b>Osmania University for conducting the most prestigious Telangana Engineering Common Entrance Test (TG ECET-2026) for this year 2026.</b>
+          </p>
+
+
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            The TG ECET - 2026 is being conducted through <b>ONLINE </b>mode only.
+          </p>
+          
         </section>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* <div className="grid md:grid-cols-2 gap-8">
           <Card className="bg-muted/30 border-none shadow-sm">
             <CardContent className="p-8">
               <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
@@ -68,9 +75,9 @@ The TG ECET - 2026 is being conducted through ONLINE mode only. state-level exam
               </ul>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
 
-        <section>
+        {/* <section>
           <h2 className="text-2xl font-serif font-bold text-primary mb-6">Exam Pattern</h2>
           <div className="overflow-x-auto rounded-lg border">
             <table className="w-full text-sm text-left">
@@ -106,9 +113,9 @@ The TG ECET - 2026 is being conducted through ONLINE mode only. state-level exam
               </tbody>
             </table>
           </div>
-        </section>
+        </section> */}
 
-        <section>
+        {/* <section>
           <div className="flex items-center gap-3 mb-6">
             <Building className="w-6 h-6 text-primary" />
             <h2 className="text-2xl font-serif font-bold text-primary">Participating Institutes</h2>
@@ -123,7 +130,7 @@ The TG ECET - 2026 is being conducted through ONLINE mode only. state-level exam
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
       </div>
     </SiteLayout>
   );

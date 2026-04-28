@@ -7,16 +7,16 @@ const actions = [
   { title: "Fill Application", desc: "Submit your details", icon: FileEdit, href: "/application" },
   { title: "Print Application", desc: "Download submitted form", icon: Printer, href: "/application" },
   { title: "Download Hall Ticket", desc: "Get your exam admit card", icon: Download, href: "/hall-ticket" },
-  { title: "Results", desc: "Check your TG ECET score", icon: Award, href: "/results" },
-  { title: "Rank Card", desc: "Download official rank card", icon: GraduationCap, href: "/results" },
-  { title: "Mock Test", desc: "Practice before exam", icon: CheckSquare, href: "/mock-test" },
+  // { title: "Results", desc: "Check your TG ECET score", icon: Award, href: "/results" },
+  // { title: "Rank Card", desc: "Download official rank card", icon: GraduationCap, href: "/results" },
+  // { title: "Mock Test", desc: "Practice before exam", icon: CheckSquare, href: "/mock-test" },
 ];
 
 export default function QuickActions() {
   return (
-    <section className="py-16 bg-muted/30">
+    <section className="py-7 bg-muted/30">
       <div className="container mx-auto max-w-7xl px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
           {actions.map((action, i) => (
             <Link key={i} href={action.href}>
               <Card className="h-full cursor-pointer hover:border-primary/50 hover:shadow-md transition-all group bg-card">

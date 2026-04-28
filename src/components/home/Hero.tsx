@@ -54,23 +54,40 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <div className="relative w-full h-[600px] overflow-hidden flex items-center justify-center">
+    <div className="relative w-full h-[600px] overflow-hidden flex items-center justify-center ">
       <div
-        className="absolute inset-0 bg-cover bg-center z-0"
+        className="absolute inset-0 bg-cover bg-center z-0 "
         style={{ backgroundImage: "url('/src/assets/campus-hero.png')" }}
       />
 
       <div className="absolute inset-0 bg-gradient-to-r from-[#2EA6D9]/85 via-[#082E5F]/45 to-[#7C2D3B]/75 z-10" />
-
+{/* 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="relative z-20 text-center px-4 max-w-4xl mx-auto"
-      >
-        <span className="inline-block text-[#F4B400] font-bold tracking-wider uppercase mb-4 text-sm md:text-base border border-[#F4B400]/40 px-5 py-1 rounded-full bg-[#F4B400]/10">
+      > */}
+      <motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.8 }}
+  className="
+    absolute
+    top-[80px]
+    left-0
+    right-0
+    mx-auto
+    w-full
+    max-w-4xl
+    text-center
+    z-20
+    px-4
+  "
+>
+        {/* <span className="inline-block text-[#F4B400] font-bold tracking-wider uppercase mb-4 text-sm md:text-base border border-[#F4B400]/40 px-5 py-1 rounded-full bg-[#F4B400]/10">
           Government of Telangana
-        </span>
+        </span> */}
 
         <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight drop-shadow-md">
           Telangana Common Entrance Test 2026
@@ -80,7 +97,7 @@ export default function Hero() {
           Gateway to pursuing M.Tech, M.Pharm, MBA, and MCA across participating universities and affiliated colleges in Telangana.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        {/* <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link href="/application">
             <Button className="w-full sm:w-auto bg-[#F4B400] text-[#082E5F] hover:bg-[#F4B400]/90 font-bold px-10 h-12 text-base shadow-lg">
               Fill Application
@@ -92,7 +109,7 @@ export default function Hero() {
               Download Hall Ticket
             </Button>
           </Link>
-        </div>
+        </div> */}
       </motion.div>
     </div>
   );

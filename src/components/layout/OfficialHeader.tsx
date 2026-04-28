@@ -36,7 +36,7 @@ export default function OfficialHeader() {
   />
   <div>
     <p className="text-sm font-semibold tracking-wide text-primary uppercase">
-      Government of Telangana
+    
     </p>
 
     <h1 className="text-5xl font-serif font-bold text-primary">

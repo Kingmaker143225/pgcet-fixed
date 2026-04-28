@@ -25,7 +25,7 @@ export default function Faq() {
         crumbs={[{ label: "FAQ" }]} 
       />
       
-      <div className="container mx-auto max-w-4xl py-12 px-4 space-y-8">
+      <div className="container mx-auto max-w-4xl py-6 px-4 space-y-8">
         <div className="relative">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
           <Input 
