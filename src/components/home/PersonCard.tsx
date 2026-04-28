@@ -181,6 +181,7 @@
 type PersonCardProps = {
   name: string;
   role?: string;
+  role2?: string;
   contact?: string;
   imageSrc: string;
   imageSize?: string;
@@ -189,9 +190,10 @@ type PersonCardProps = {
 export default function PersonCard({
   name,
   role,
+  role2,
   contact,
   imageSrc,
-  imageSize = "w-28 h-28",
+  imageSize = "w-44 h-44",
 }: PersonCardProps) {
   return (
     // <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-8 text-center max-w-md w-full">
@@ -218,20 +220,26 @@ export default function PersonCard({
       </div>
 
       {/* Name */}
-      <h3 className="text-2xl font-serif font-bold text-[#06254D] leading-tight whitespace-nowrap">
+      <h3 className="text-[20px] font-serif font-bold text-[#06254D] leading-tight whitespace-nowrap">
         {name}
       </h3>
 
       {/* Optional role */}
       {role && (
-        <p className="mt-3 text-xl font-semibold text-[#06254D]">
+        <p className="mt-3 text-[18px] font-semibold text-[#06254D]">
           {role}
         </p>
       )}
+      {role2 && (
+        <p className="text-[18px] font-semibold text-[#06254D]">
+          {role2}
+        </p>
+      ) }
+
 
       {/* Contact */}
       {contact && (
-        <p className="mt-4 text-lg text-[#06254D] leading-relaxed whitespace-pre-line">
+        <p className="mt-4 text-[16px] text-[#06254D] leading-relaxed whitespace-pre-line">
           {contact}
         </p>
       )}

@@ -84,14 +84,14 @@ Telangana, India."
   <PersonCard 
   name="Prof. Kumar Molugaram"
 
-  role={`Chairman, TG ECET 2026 &
-Vice-Chancellor, Osmania University`}
+  role={`Chairman, TG ECET 2026 &`}
+  role2={`Vice-Chancellor, Osmania University`}
     
   contact={`Hyderabad-500007
 Telangana, India.`}
 
   imageSrc="/convener.png"
-  imageSize="w-28 h-28"
+  imageSize="w-44 h-44"
 />
 </div>
 
@@ -137,7 +137,7 @@ Principal, University College of Engineering (Autonomous)`}
 Telangana, India.`}
 
   imageSrc="/coordinator.png"
-  imageSize="w-28 h-28"
+  imageSize="w-44 h-44"
 />
 </div>
 
