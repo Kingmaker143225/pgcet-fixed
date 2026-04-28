@@ -57,7 +57,7 @@ export default function Hero() {
     <div className="relative w-full h-[600px] overflow-hidden flex items-center justify-center ">
       <div
         className="absolute inset-0 bg-cover bg-center z-0 "
-        style={{ backgroundImage: "url('/src/assets/campus-hero.png')" }}
+        style={{ backgroundImage: "url('/campus-hero.png')" }}
       />
 
       <div className="absolute inset-0 bg-gradient-to-r from-[#2EA6D9]/85 via-[#082E5F]/45 to-[#7C2D3B]/75 z-10" />

@@ -2,8 +2,7 @@ import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Link } from "wouter";
-import leftLogo from "../../assets/left-logo.png";
-import rightLogo from "../../assets/right-logo.png";
+
 
 export default function OfficialHeader() {
   return (

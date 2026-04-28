@@ -90,7 +90,7 @@ Vice-Chancellor, Osmania University`}
   contact={`Hyderabad-500007
 Telangana, India.`}
 
-  imageSrc="/src/assets/convener.png"
+  imageSrc="/convener.png"
   imageSize="w-28 h-28"
 />
 </div>
@@ -136,7 +136,7 @@ Principal, University College of Engineering (Autonomous)`}
   contact={`Osmania University, Hyderabad-500007
 Telangana, India.`}
 
-  imageSrc="/src/assets/coordinator.png"
+  imageSrc="/coordinator.png"
   imageSize="w-28 h-28"
 />
 </div>
