@@ -194,7 +194,23 @@ export default function LatestUpdates() {
             </button>
           </DialogTrigger>
 
-          <DialogContent className="max-w-[95vw] w-[95vw] h-[92vh] p-0 overflow-hidden bg-white">
+          {/* <DialogContent className="max-w-[95vw] w-[95vw] h-[92vh] p-0 overflow-hidden bg-white"> */}
+          <DialogContent
+  className="
+    max-w-[95vw] 
+    w-[95vw] 
+    h-[92vh] 
+    p-0 
+    overflow-hidden 
+    bg-white
+
+    [&>button]:text-red-600
+    [&>button]:opacity-100
+    [&>button]:right-4
+    [&>button]:top-4
+    [&>button]:scale-125
+  "
+>
   {/* Header */}
   <DialogHeader className="h-16 px-6 border-b bg-[#06254D] flex flex-row items-center justify-between">
     <DialogTitle className="text-lg md:text-xl font-bold text-white">
@@ -263,7 +279,23 @@ export default function LatestUpdates() {
                 </button>
               </DialogTrigger>
 
-              <DialogContent className="max-w-[95vw] w-[95vw] h-[92vh] p-0 overflow-hidden bg-white">
+              {/* <DialogContent className="max-w-[95vw] w-[95vw] h-[92vh] p-0 overflow-hidden bg-white"> */}
+              <DialogContent
+  className="
+    max-w-[95vw] 
+    w-[95vw] 
+    h-[92vh] 
+    p-0 
+    overflow-hidden 
+    bg-white
+
+    [&>button]:text-red-600
+    [&>button]:opacity-100
+    [&>button]:right-4
+    [&>button]:top-4
+    [&>button]:scale-125
+  "
+>
                 <DialogHeader className="h-16 px-6 border-b bg-[#06254D] flex flex-row items-center justify-between">
                   <DialogTitle className="text-lg md:text-xl font-bold text-white">
                     {item.label}

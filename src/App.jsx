@@ -4,6 +4,8 @@ import { Toaster as UI_Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner_Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
+import ScrollToTop from "@/components/ScrollToTop";
+
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import ImportantDates from "@/pages/ImportantDates";
@@ -64,6 +66,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+          <ScrollToTop />
           <Router />
         </WouterRouter>
         <UI_Toaster />
