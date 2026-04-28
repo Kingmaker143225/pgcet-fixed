@@ -45,8 +45,8 @@ const INFORMATION = [
   // { label: "Detailed Notification", href: "/notifications", icon: ScrollText },
   // { label: "Regional Centers", href: "/about", icon: MapPin },
   {label: "Notification", href: "/pdfs/TG-ECET-2026-Notification.pdf", icon: FileText, isPdf: true},
-  { label: "Detailed Notification", href: "/pdfs/TG-ECET-2026-Detailed-Notification.pdf", icon: ScrollText, isPdf: true },
-  { label: "Regional Centers", href: "/pdfs/TG-ECET-2026-Regional-Centers.pdf", icon: MapPin, isPdf: true },
+  { label: "Detailed Notification", href: "/pdfs/detailed-notification.pdf", icon: ScrollText, isPdf: true },
+  { label: "Regional Centers", href: "/pdfs/regional-centres.pdf", icon: MapPin, isPdf: true },
   { label: "Important Dates", href: "/important-dates", icon: CalendarDays },
 
   {
