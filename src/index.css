@@ -241,3 +241,93 @@ footer {
 .rounded-full[class*="bg-muted"] * {
   color: #082E5F !important;
 }
+
+
+/* application form styles */
+/* @media print {
+  body {
+    background: white !important;
+  }
+
+  header,
+  footer,
+  nav,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  .print-area {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 12mm;
+    box-shadow: none !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+} */
+
+@media print {
+  html,
+  body,
+  #root {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    overflow: hidden !important;
+    background: white !important;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .print-area,
+  .print-area * {
+    visibility: visible !important;
+  }
+
+  .print-area {
+  position: absolute !important;
+
+  /* adjust these for position */
+  top: 3mm !important;
+  left: 9mm !important;
+
+  /* because left/right space is added */
+  width: 198mm !important;
+  height: 287mm !important;
+
+  margin: 0 !important;
+  padding: 2mm !important;
+
+  border: none !important;
+  box-shadow: none !important;
+
+  font-size: 10px !important;
+  line-height: 1.15 !important;
+
+  /* adjust scale if needed */
+  transform: scale(0.92);
+  transform-origin: top left;
+}
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+
+
+  .print\:hidden,
+  header,
+  footer,
+  nav,
+  button {
+    display: none !important;
+  }
+}

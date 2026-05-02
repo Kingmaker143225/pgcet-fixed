@@ -102,7 +102,11 @@ Osmania University, Hyderabad-500 007</span>
           <div className="flex items-center gap-4">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <span className="w-1 h-1 rounded-full bg-white/30"></span>
-            <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
+            <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a>
+            <span className="w-1 h-1 rounded-full bg-white/30"></span>
+            <a href="#" className="hover:text-white transition-colors">Disclaimer</a>
+            <span className="w-1 h-1 rounded-full bg-white/30"></span>
+            <a href="#" className="hover:text-white transition-colors">Refund & Cancellation Policy</a>
           </div>
           <p className="text-secondary flex items-center gap-1">
             Designed for the students of Telangana

@@ -338,16 +338,378 @@
 
 
 
+// import SiteLayout from "@/components/layout/SiteLayout";
+// import PageBanner from "@/components/layout/PageBanner";
+
+// export default function ApplicationForm() {
+//   return (
+//     <SiteLayout>
+//       <PageBanner
+//         title="Application Form"
+//         crumbs={[{ label: "Application Form" }]}
+//       />
+
+//       <div className="container mx-auto max-w-7xl py-12 px-4">
+//         <PageBox title="TG ECET - 2026 APPLICATION FORM">
+//           <p className="mb-4">
+//             <span className="text-red-600 font-bold">NOTE :</span>{" "}
+//             In case you have not paid the fee yet, please visit this page{" "}
+//             <span className="text-blue-700">(Click Here)</span> and pay the fee first.
+//           </p>
+
+//           <div className="grid md:grid-cols-4 gap-4">
+//             <Input
+//               label="Payment Reference ID *"
+//               placeholder="Enter Payment Reference ID"
+//             />
+
+//             <Input
+//               label="Qualifying Examination Hall Ticket No. *"
+//               placeholder="Enter Qualifying Examination Hall Ticket"
+//             />
+
+//             <Input
+//               label="Mobile Number *"
+//               placeholder="Enter Mobile Number"
+//             />
+
+//             <Input
+//               label="Date of Birth * (dd/mm/yyyy)"
+//               placeholder="Select Date of Birth"
+//             />
+//           </div>
+
+//           <div className="text-center mt-6">
+//             <button className="bg-green-600 text-white px-8 py-3 rounded-md hover:bg-green-700">
+//               Proceed to Fill Application
+//             </button>
+//           </div>
+
+//         </PageBox>
+//       </div>
+
+//     </SiteLayout>
+//   );
+// }
+
+
+// function PageBox({
+//   title,
+//   children
+// }: {
+//   title: string;
+//   children: React.ReactNode;
+// }) {
+//   return (
+//     <div className="border border-gray-300 bg-[#f8fbf8] shadow-sm min-h-[260px]">
+//       <h2 className="bg-[#4b3f8f] text-white font-bold text-xl px-4 py-2">
+//         {title}
+//       </h2>
+
+//       <div className="p-6">
+//         {children}
+//       </div>
+//     </div>
+//   );
+// }
+
+
+// function Input({
+//   label,
+//   placeholder
+// }: {
+//   label: string;
+//   placeholder: string;
+// }) {
+//   return (
+//     <div>
+//       <label className="font-semibold block mb-2">
+//         {label}
+//       </label>
+
+//       <input
+//         className="w-full border border-gray-300 rounded-md px-4 py-3"
+//         placeholder={placeholder}
+//       />
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { useState } from "react";
+// import SiteLayout from "@/components/layout/SiteLayout";
+// import PageBanner from "@/components/layout/PageBanner";
+// import { supabase } from "@/lib/supabaseClient";
+
+// export default function ApplicationForm() {
+//   const [form, setForm] = useState({
+//     paymentRef: "",
+//     hallTicket: "",
+//     mobile: "",
+//     dob: "",
+//   });
+
+//   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//     setForm({ ...form, [e.target.name]: e.target.value });
+//   };
+
+//   const handleSubmit = async (e: React.FormEvent) => {
+//     e.preventDefault();
+
+//     if (!form.paymentRef || !form.hallTicket || !form.mobile || !form.dob) {
+//       alert("Please fill all required fields");
+//       return;
+//     }
+
+//     const { data, error } = await supabase
+//       .from("fee_payments")
+//       .select("*")
+//       .eq("payment_reference_id", form.paymentRef)
+//       .eq("hall_ticket_no", form.hallTicket)
+//       .eq("mobile_number", form.mobile)
+//       .eq("date_of_birth", form.dob)
+//       .single();
+
+//     if (error || !data) {
+//       alert("Invalid details or fee payment not found");
+//       return;
+//     }
+
+//     const { data: existingApplication } = await supabase
+//       .from("applications")
+//       .select("*")
+//       .eq("payment_reference_id", form.paymentRef)
+//       .maybeSingle();
+
+//     if (existingApplication) {
+//       alert(
+//         "Application already submitted.\nYour Registration Number is: " +
+//           existingApplication.registration_number
+//       );
+//       return;
+//     }
+
+//     const regNumber = "TGECET2026" + Date.now();
+
+//     const { error: insertError } = await supabase.from("applications").insert([
+//       {
+//         registration_number: regNumber,
+//         payment_reference_id: form.paymentRef,
+//         hall_ticket_no: form.hallTicket,
+//         mobile_number: form.mobile,
+//         date_of_birth: form.dob,
+//       },
+//     ]);
+
+//     if (insertError) {
+//       alert("Error: " + insertError.message);
+//       return;
+//     }
+
+//     alert("Application submitted successfully!\nRegistration Number: " + regNumber);
+//   };
+
+//   return (
+//     <SiteLayout>
+//       <PageBanner
+//         title="Application Form"
+//         crumbs={[{ label: "Application Form" }]}
+//       />
+
+//       <div className="container mx-auto max-w-7xl py-12 px-4">
+//         <PageBox title="TG ECET - 2026 APPLICATION FORM">
+//           <p className="mb-4">
+//             <span className="text-red-600 font-bold">NOTE :</span>{" "}
+//             In case you have not paid the fee yet, please visit this page{" "}
+//             <span className="text-blue-700">(Click Here)</span> and pay the fee first.
+//           </p>
+
+//           <form onSubmit={handleSubmit}>
+//             <div className="grid md:grid-cols-4 gap-4">
+//               <Input
+//                 label="Payment Reference ID *"
+//                 name="paymentRef"
+//                 value={form.paymentRef}
+//                 onChange={handleChange}
+//                 placeholder="Enter Payment Reference ID"
+//               />
+
+//               <Input
+//                 label="Qualifying Examination Hall Ticket No. *"
+//                 name="hallTicket"
+//                 value={form.hallTicket}
+//                 onChange={handleChange}
+//                 placeholder="Enter Qualifying Examination Hall Ticket"
+//               />
+
+//               <Input
+//                 label="Mobile Number *"
+//                 name="mobile"
+//                 value={form.mobile}
+//                 onChange={handleChange}
+//                 placeholder="Enter Mobile Number"
+//               />
+
+//               <Input
+//                 label="Date of Birth * (dd/mm/yyyy)"
+//                 name="dob"
+//                 value={form.dob}
+//                 onChange={handleChange}
+//                 placeholder="Select Date of Birth"
+//               />
+//             </div>
+
+//             <div className="text-center mt-6">
+//               <button
+//                 type="submit"
+//                 className="bg-green-600 text-white px-8 py-3 rounded-md hover:bg-green-700"
+//               >
+//                 Proceed to Fill Application
+//               </button>
+//             </div>
+//           </form>
+//         </PageBox>
+//       </div>
+//     </SiteLayout>
+//   );
+// }
+
+// function PageBox({
+//   title,
+//   children,
+// }: {
+//   title: string;
+//   children: React.ReactNode;
+// }) {
+//   return (
+//     <div className="border border-gray-300 bg-[#f8fbf8] shadow-sm min-h-[260px]">
+//       <h2 className="bg-[#4b3f8f] text-white font-bold text-xl px-4 py-2">
+//         {title}
+//       </h2>
+
+//       <div className="p-6">{children}</div>
+//     </div>
+//   );
+// }
+
+// function Input({
+//   label,
+//   name,
+//   value,
+//   onChange,
+//   placeholder,
+// }: {
+//   label: string;
+//   name: string;
+//   value: string;
+//   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+//   placeholder: string;
+// }) {
+//   return (
+//     <div>
+//       <label className="font-semibold block mb-2">{label}</label>
+
+//       <input
+//         name={name}
+//         value={value}
+//         onChange={onChange}
+//         className="w-full border border-gray-300 rounded-md px-4 py-3"
+//         placeholder={placeholder}
+//       />
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
+import { useState } from "react";
+import { useLocation } from "wouter";
 import SiteLayout from "@/components/layout/SiteLayout";
 import PageBanner from "@/components/layout/PageBanner";
+import { supabase } from "@/lib/supabaseClient";
 
 export default function ApplicationForm() {
+  const [, navigate] = useLocation();
+
+  const [form, setForm] = useState({
+    paymentRef: "",
+    hallTicket: "",
+    mobile: "",
+    dob: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!form.paymentRef || !form.hallTicket || !form.mobile || !form.dob) {
+      alert("Please fill all required fields");
+      return;
+    }
+
+    const { data, error } = await supabase
+      .from("fee_payments")
+      .select("*")
+      .eq("payment_reference_id", form.paymentRef)
+      .eq("hall_ticket_no", form.hallTicket)
+      .eq("mobile_number", form.mobile)
+      .eq("date_of_birth", form.dob)
+      .maybeSingle();
+
+    if (error || !data) {
+      alert("Invalid details or fee payment not found");
+      return;
+    }
+
+    const { data: existingApplication } = await supabase
+      .from("applications")
+      .select("*")
+      .eq("payment_reference_id", form.paymentRef)
+      .maybeSingle();
+
+    if (existingApplication) {
+      alert(
+        "Application already submitted.\nYour Registration Number is: " +
+          existingApplication.registration_number
+      );
+      return;
+    }
+
+    sessionStorage.setItem(
+      "verifiedPaymentData",
+      JSON.stringify({
+        paymentRef: form.paymentRef,
+        hallTicket: form.hallTicket,
+        mobile: form.mobile,
+        dob: form.dob,
+      })
+    );
+
+    navigate("/full-application");
+  };
+
   return (
     <SiteLayout>
-      <PageBanner
-        title="Application Form"
-        crumbs={[{ label: "Application Form" }]}
-      />
+      <PageBanner title="Application Form" crumbs={[{ label: "Application Form" }]} />
 
       <div className="container mx-auto max-w-7xl py-12 px-4">
         <PageBox title="TG ECET - 2026 APPLICATION FORM">
@@ -357,80 +719,52 @@ export default function ApplicationForm() {
             <span className="text-blue-700">(Click Here)</span> and pay the fee first.
           </p>
 
-          <div className="grid md:grid-cols-4 gap-4">
-            <Input
-              label="Payment Reference ID *"
-              placeholder="Enter Payment Reference ID"
-            />
+          <form onSubmit={handleSubmit}>
+            <div className="grid md:grid-cols-4 gap-4">
+              <Input label="Payment Reference ID *" name="paymentRef" value={form.paymentRef} onChange={handleChange} placeholder="Enter Payment Reference ID" />
+              <Input label="Qualifying Examination Hall Ticket No. *" name="hallTicket" value={form.hallTicket} onChange={handleChange} placeholder="Enter Qualifying Examination Hall Ticket" />
+              <Input label="Mobile Number *" name="mobile" value={form.mobile} onChange={handleChange} placeholder="Enter Mobile Number" />
+              <Input label="Date of Birth * (dd/mm/yyyy)" name="dob" value={form.dob} onChange={handleChange} placeholder="Select Date of Birth" />
+            </div>
 
-            <Input
-              label="Qualifying Examination Hall Ticket No. *"
-              placeholder="Enter Qualifying Examination Hall Ticket"
-            />
-
-            <Input
-              label="Mobile Number *"
-              placeholder="Enter Mobile Number"
-            />
-
-            <Input
-              label="Date of Birth * (dd/mm/yyyy)"
-              placeholder="Select Date of Birth"
-            />
-          </div>
-
-          <div className="text-center mt-6">
-            <button className="bg-green-600 text-white px-8 py-3 rounded-md hover:bg-green-700">
-              Proceed to Fill Application
-            </button>
-          </div>
-
+            <div className="text-center mt-6">
+              <button type="submit" className="bg-green-600 text-white px-8 py-3 rounded-md hover:bg-green-700">
+                Proceed to Fill Application
+              </button>
+            </div>
+          </form>
         </PageBox>
       </div>
-
     </SiteLayout>
   );
 }
 
-
-function PageBox({
-  title,
-  children
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
+function PageBox({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="border border-gray-300 bg-[#f8fbf8] shadow-sm min-h-[260px]">
-      <h2 className="bg-[#4b3f8f] text-white font-bold text-xl px-4 py-2">
-        {title}
-      </h2>
-
-      <div className="p-6">
-        {children}
-      </div>
+      <h2 className="bg-[#4b3f8f] text-white font-bold text-xl px-4 py-2">{title}</h2>
+      <div className="p-6">{children}</div>
     </div>
   );
 }
 
-
 function Input({
   label,
-  placeholder
+  name,
+  value,
+  onChange,
+  placeholder,
 }: {
   label: string;
+  name: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder: string;
 }) {
   return (
     <div>
-      <label className="font-semibold block mb-2">
-        {label}
-      </label>
-
-      <input
-        className="w-full border border-gray-300 rounded-md px-4 py-3"
-        placeholder={placeholder}
-      />
+      <label className="font-semibold block mb-2">{label}</label>
+      <input name={name} value={value} onChange={onChange} className="w-full border border-gray-300 rounded-md px-4 py-3" placeholder={placeholder} />
     </div>
   );
 }

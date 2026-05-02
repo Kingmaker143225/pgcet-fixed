@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 
 import ScrollToTop from "@/components/ScrollToTop";
 
+import FullApplication from "@/pages/FullApplication";
+
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import ImportantDates from "@/pages/ImportantDates";
@@ -56,6 +58,8 @@ function Router() {
 <Route path="/print-application" component={PrintApplication} />
 <Route path="/payment-status" component={PaymentStatus} />
 <Route path="/registration-number" component={RegistrationNumber} />
+
+<Route path="/full-application" component={FullApplication} />
 <Route component={NotFound} />
     </Switch>
   );

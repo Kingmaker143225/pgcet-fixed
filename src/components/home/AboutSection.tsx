@@ -84,7 +84,7 @@ Telangana, India."
   <PersonCard 
   name="Prof. Kumar Molugaram"
 
-  role={`Chairman, TG ECET 2026 &`}
+  role={`Chairman, TG ECET (WP)-2026 &`}
   role2={`Vice-Chancellor, Osmania University`}
     
   contact={`Hyderabad-500007
@@ -97,7 +97,7 @@ Telangana, India.`}
 
           {/* CENTER CONTENT */}
           <div className="space-y-6 text-center lg:text-left">
-            <SectionTitle title="About TG ECET-2026" />
+            <SectionTitle title="About TG ECET (WP)-2026" />
 
             <div className="prose prose-lg prose-slate text-muted-foreground leading-relaxed">
               <p>
@@ -130,7 +130,7 @@ Telangana, India."
   <PersonCard 
   name="Prof. P. Chandra Sekhar"
 
-  role={`Convener, TGECET-2026 &
+  role={`Convener, TG ECET (WP)-2026 &
 Principal, University College of Engineering (Autonomous)`}
     
   contact={`Osmania University, Hyderabad-500007
