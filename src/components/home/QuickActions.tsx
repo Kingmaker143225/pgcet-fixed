@@ -3,9 +3,9 @@ import { CreditCard, FileEdit, Printer, Download, Award, GraduationCap, CheckSqu
 import { Card, CardContent } from "@/components/ui/card";
 
 const actions = [
-  { title: "Pay Fee", desc: "Pay application fee online", icon: CreditCard, href: "/application" },
+  { title: "Pay Fee", desc: "Pay application fee online", icon: CreditCard, href: "/fee-payment" },
   { title: "Fill Application", desc: "Submit your details", icon: FileEdit, href: "/application" },
-  { title: "Print Application", desc: "Download submitted form", icon: Printer, href: "/application" },
+  { title: "Print Application", desc: "Download submitted form", icon: Printer, href: "/print-application" },
   { title: "Download Hall Ticket", desc: "Get your exam admit card", icon: Download, href: "/hall-ticket" },
   // { title: "Results", desc: "Check your TG ECET score", icon: Award, href: "/results" },
   // { title: "Rank Card", desc: "Download official rank card", icon: GraduationCap, href: "/results" },
